@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { describe, expect, it, beforeEach } from "vitest";
 import { clearDb, seedFixtures } from "../seed-helpers";
-import { findTheGrumpiestCriticId, findTheNicestCriticId } from "./p8";
 import { updateUsername } from "./p9";
 import { prisma } from "./prisma";
 

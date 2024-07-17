@@ -6,4 +6,12 @@ export const createUserWithData = async ({
 }: {
   username: string;
   age: number;
-}) => {};
+}) => {
+  const newUser = await prisma.user.create({
+    data: {
+      username,
+      age,
+    },
+  });
+  return newUser;
+};
