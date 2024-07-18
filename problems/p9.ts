@@ -1,7 +1,7 @@
 import { prisma } from "./prisma";
 
 export const updateUsername = async (userId: number, newUsername: string) => {
-  const updateUsername = await prisma.user.update({
+  return prisma.user.update({
     where: {
       id: userId,
     },
@@ -9,5 +9,4 @@ export const updateUsername = async (userId: number, newUsername: string) => {
       username: newUsername,
     },
   });
-  return updateUsername;
 };
